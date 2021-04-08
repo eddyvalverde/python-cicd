@@ -7,8 +7,9 @@ services:
     links:
       - web
   web:
-    build: .
-    dockerfile: Dockerfile
+    build:
+      context: .
+      dockerfile: Dockerfile
     links:
       - redis
   redis:
