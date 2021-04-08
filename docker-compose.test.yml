@@ -1,8 +1,9 @@
 version: "3.9"
 services:
   sut:
-    build: .
-    dockerfile: Dockerfile.test
+    build:
+      context: .
+      dockerfile: Dockerfile.test
     links:
       - web
   web:
